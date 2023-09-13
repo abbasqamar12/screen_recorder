@@ -1,0 +1,74 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="Audio Configuration">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="@string/key_record_audio"
+            app:summary="@string/summary_record_audio"
+            app:title="@string/title_record_audio" />
+
+        <ListPreference
+            app:useSimpleSummaryProvider="true"
+            app:defaultValue="2"
+            app:dialogTitle="Audio Source"
+            app:entries="@array/pref_audio_source"
+            app:entryValues="@array/pref_audio_source_values"
+            app:key="@string/key_audio_source"
+            app:summary="Select microphone to be used"
+            app:title="Audio Source"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Video Configuration">
+
+        <ListPreference
+            app:defaultValue="0"
+            app:dialogTitle="Video Encoder"
+            app:entries="@array/pref_video_encoder"
+            app:entryValues="@array/pref_video_resolution_values"
+            app:key="@string/key_video_encoder"
+            app:summary="Select video encoder"
+            app:title="Video encoder" />
+
+        <ListPreference
+            app:defaultValue="4"
+            app:dialogTitle="@string/title_video_resolution"
+            app:entries="@array/pref_video_resolution"
+            app:entryValues="@array/pref_video_resolution_values"
+            app:key="@string/key_video_resolution"
+            app:summary="@string/summary_video_resolution"
+            app:title="@string/title_video_resolution" />
+
+        <ListPreference
+            app:defaultValue="3"
+            app:dialogTitle="Frame rate"
+            app:entries="@array/pref_video_framerate"
+            app:entryValues="@array/pref_video_resolution_values"
+            app:key="@string/key_video_fps"
+            app:summary="Set video frame rate"
+            app:title="Frame rate" />
+
+        <ListPreference
+            app:defaultValue="5"
+            app:dialogTitle="Bit-rate"
+            app:entries="@array/pref_video_bitrate"
+            app:entryValues="@array/pref_video_resolution_values"
+            app:key="@string/key_video_bitrate"
+            app:summary="Set video bit-rate"
+            app:title="Bit-rate" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="More">
+
+        <ListPreference
+            app:defaultValue="1"
+            app:dialogTitle="Output Format"
+            app:entries="@array/pref_output_format"
+            app:entryValues="@array/pref_video_resolution_values"
+            app:key="@string/key_output_format"
+            app:summary="Set output format"
+            app:title="Output Format" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
